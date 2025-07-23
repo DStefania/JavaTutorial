@@ -2,17 +2,18 @@ package oopIncapsularePolimorfism;
 
 public class Masina {
 
-   // incapsulare = concept pe baza caruia tinem departe de exterior valorile proprietatilor pe car enu vrem sa le modificam
-   // incapsularea se poate aplica la nivel de proprietati dar si de metode
+    // incapsulare = concept pe baza caruia tinem departe de exterior valorile proprietatilor pe car enu vrem sa le modificam
+    // incapsularea se poate aplica la nivel de proprietati dar si de metode
     // private = access control care are ca rol sa restranga vizibilitatei unei proprietati.metode doar la nivelul clasei unde este definita
     // get/set
 
-    // POlimorfism = concept pe baza caruia o metoda poate avea implementari diferite pentru fiecare circumstanta
-    //este de 2 feluri: dinamic )override) si static (overload)
-    //dinamic= intr-o ierarhie de clase obtinute prin mostenire o metoda poate avea implementari diferie
-    //poliformismul dinamic se regaseste doar la relatia de tip parinte-copil
-    //static = posibilitatea de a defini de mai multe ori o metoda cu acelasi nume insa cu numar/tip de parametrii diferiti
-    //
+    // Polimorfism = concept pe baza caruia o metoda poate avea implementari diferite pentru fiecare circumstanta
+    // este de 2 feluri: dinamic (override) si static (overload)
+    // dinamic = intr-o ierarhie de clase obtinute prin mostenire o metoda poate avea implementari diferie
+    // poliformismul dinamic se regaseste doar la relatia de tip parinte-copil
+    // static = posibilitatea de a defini de mai multe ori o metoda cu acelasi nume insa cu numar/tip de parametrii diferiti
+    // polimorfismul static nu este fortat de prezenta unei relatii de tip parinte-copil
+
 
     private String marca;
     private String model;
@@ -28,6 +29,13 @@ public class Masina {
         this.pret = pret;
     }
 
+    public Masina(String marca, String model, String culoare, int caiPutere) {
+        this.marca = marca;
+        this.model = model;
+        this.culoare = culoare;
+        this.caiPutere = caiPutere;
+    }
+
     public void prezentareComandaMasina() {
         System.out.println("Marca masinii este: " + marca);
         System.out.println("Modelul masinii este: " + model);
@@ -35,6 +43,10 @@ public class Masina {
         System.out.println("Masina are:" + caiPutere + " cai putere");
         System.out.println("Pretul masinii este:" + pret);
 
+    }
+
+    public void pornesteMotor (){
+        System.out.println("Masina se porneste de la buton");
     }
 
     public String getMarca() {

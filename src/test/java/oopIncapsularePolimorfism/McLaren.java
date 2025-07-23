@@ -6,8 +6,8 @@ import java.util.List;
 
 public class McLaren extends Masina {
 
-    public List<String> dotariInterioare;
-    public List<String> dotariExterioare;
+    private List<String> dotariInterioare;
+    private List<String> dotariExterioare;
 
     public McLaren(String marca, String model, String culoare, int caiPutere, int pret, List<String> dotariInterioare, List<String> dotariExterioare) {
         super(marca, model, culoare, caiPutere, pret);
@@ -26,5 +26,25 @@ public class McLaren extends Masina {
         for (int i = 0; i < dotariExterioare.size(); i++) {
             System.out.println(i + ". " + dotariExterioare.get(i));
         }
+    }
+
+    public void pornesteMotor() {
+        System.out.println("Masina Mclaren porneste motorul din telefon");
+    }
+
+    public List<String> getDotariInterioare() {
+        return dotariInterioare;
+    }
+
+    public void setDotariInterioare(List<String> dotariInterioare) {
+        this.dotariInterioare = dotariInterioare;
+    }
+
+    public List<String> getDotariExterioare() {
+        return dotariExterioare;
+    }
+
+    public void setDotariExterioare(List<String> dotariExterioare) {
+        this.dotariExterioare = dotariExterioare;
     }
 }

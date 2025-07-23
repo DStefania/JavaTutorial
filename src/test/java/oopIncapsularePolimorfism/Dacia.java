@@ -18,6 +18,23 @@ public class Dacia extends Masina {
         }
     }
 
+    public void pornesteMotor(){
+        System.out.println("masina dacia porneste motorul electric");
+    }
+
+    public void procesarePlata(){
+        System.out.println("Plata pentru masina Dacia se proceseaza cu suma de" +getPret());
+    }
+
+    public void procesarePlata(boolean buyBack){
+        System.out.println("Plata pentru masina Dacia se proceseaza tinand cont de optiunea de buyBack");
+    }
+
+    public void procesarePlata(int procent){
+        System.out.println("Plata pentru masina Dacia vine cu o reducere de " + procent+"%");
+    }
+
+
     public List<String> getDotariExterioare() {
         return dotariExterioare;
     }
