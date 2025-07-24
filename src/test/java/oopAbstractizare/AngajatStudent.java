@@ -1,4 +1,24 @@
 package oopAbstractizare;
 
 public class AngajatStudent implements AngajatInterface,StudentInterface{
+
+    @Override
+    public void mergeLaBirou() {
+
+    }
+
+    @Override
+    public void primesteSalariul() {
+
+    }
+
+    @Override
+    public void muncesteUnNumarFixDeOre() {
+
+    }
+
+    @Override
+    public void mergeInConcediu() {
+
+    }
 }
